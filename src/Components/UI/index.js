@@ -55,9 +55,9 @@ export const Form = styled.form`
     bottom: 0%;
 `
 
-export const Input = styled.input`
-    width:328px;
-    height: 56px;
-    margin-bottom:10px;
-    background: #c5c1c1;
-`
+// export const Input = styled.input`
+//     width:328px;
+//     height: 56px;
+//     margin-bottom:10px;
+//     background: #c5c1c1;
+// `

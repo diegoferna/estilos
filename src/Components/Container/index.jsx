@@ -1,9 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Box, Retangulo, Form, Input, Button } from '../UI'
+import { Box, Retangulo, Form, Button } from '../UI'
 import Logo from '../../Assets/img/Logo.svg'
 import Titulo from '../Titulo/Titulo'
 import Subtitulo from '../Subtitulo'
+import Input from '../UI/Nova/Input'
 
 export const Container = styled.div`
     position:relative;
@@ -35,8 +36,8 @@ export default  () => {
                     <Titulo>Entrar</Titulo>
                 </Retangulo>
                 <Form>
-                    <Input name="Email"/>
-                    <Input name="Senha"/>
+                    <Input name="Email"/>    
+                    <Input name="Password"/>
                 </Form>
                 <Subtitulo>Não possui conta ainda?<Registro>Registre-se aqui</Registro></Subtitulo>
                 <Button>ENTRAR</Button>
