@@ -1,6 +1,6 @@
 
 import { ResetGeral } from './ResetGeral'
-import Container from './Components/Container';
+import FormularioCadastro from './Components/FormularioDecadasto/FomularioCadastro';
 
 function App() {
 
@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <ResetGeral/>
-      <Container/>
+      <FormularioCadastro/>
     </div>
   );
 }

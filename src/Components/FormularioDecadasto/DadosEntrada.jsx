@@ -1,18 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Box, Retangulo, Form, Button } from '../UI'
+import { Container } from '@material-ui/core'
 import Logo from '../../Assets/img/Logo.svg'
 import Titulo from '../Titulo/Titulo'
 import Subtitulo from '../Subtitulo'
-import Input from '../UI/Nova/Input'
-
-export const Container = styled.div`
-    position:relative;
-    width:1440px;
-    height: 1024px;
-    background: #F2F2F2;
-
-`
+import { EntradaEmail, EntradaPassword } from '../UI/Input/Input'
+import DadosPessoais from './DadosPessoais'
 
 export const Img = styled.img`
     position: absolute;
@@ -27,17 +21,19 @@ export const Registro = styled.a`
     margin-left:5px;
 `
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default  () => {
     return(
-        <Container>
+        
+        <Container maxWidth="lg">
             <Box>
                 <Img src={Logo}/>
                 <Retangulo>
-                    <Titulo>Entrar</Titulo>
+                    <Titulo>Novo registro</Titulo>
                 </Retangulo>
                 <Form>
-                    <Input name="Email"/>    
-                    <Input name="Password"/>
+                    <EntradaEmail name="Email"/>    
+                    <EntradaPassword name="Password"/>
                 </Form>
                 <Subtitulo>Não possui conta ainda?<Registro>Registre-se aqui</Registro></Subtitulo>
                 <Button>ENTRAR</Button>

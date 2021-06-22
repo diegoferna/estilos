@@ -5,7 +5,7 @@ const Titulo = styled.h1`
 position: absolute;
 margin: 0 auto;
 
-font-family: Roboto;
+font-family: 'Roboto', sans-serif;
 font-style: normal;
 font-weight: 500;
 font-size: 20px;
