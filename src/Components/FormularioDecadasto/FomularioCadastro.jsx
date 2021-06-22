@@ -12,7 +12,7 @@ function FormularioCadastro(){
 
 
     const formularios = [
-        <DadosEntrada/>,
+        <DadosEntrada />,
         <DadosPessoais/>,
         <DadosLogado/>
     ]

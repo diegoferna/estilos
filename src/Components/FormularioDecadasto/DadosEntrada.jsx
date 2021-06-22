@@ -35,7 +35,7 @@ export default  () => {
                     <EntradaEmail name="Email"/>    
                     <EntradaPassword name="Password"/>
                 </Form>
-                <Subtitulo>Não possui conta ainda?<Registro>Registre-se aqui</Registro></Subtitulo>
+                <Subtitulo>Não possui conta ainda?<Registro >Registre-se aqui</Registro></Subtitulo>
                 <Button>ENTRAR</Button>
             </Box>
         </Container>
