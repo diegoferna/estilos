@@ -5,19 +5,23 @@ import DadosLogado from './DadosLogado'
 import { useState } from 'react'
 
 
-function FormularioCadastro(){
+function FormularioCadastro({aoEnviar}){
     const [tela, setTelaAtual] = useState(0);
-
+    const [dados, setDados] = useState({})
 
 
 
     const formularios = [
-        <DadosEntrada />,
-        <DadosPessoais/>,
-        <DadosLogado/>
+        <DadosEntrada aoEnviar={proxima}/>,
+        <DadosPessoais  aoEnviar={proxima}/>,
+        <DadosLogado  />
     ]
 
-    function proxima(dados) {
+    function armazenarDados(dados){
+
+    }
+
+    function proxima() {
         setTelaAtual(tela+1)
     }
 

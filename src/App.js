@@ -1,6 +1,8 @@
 
 import { ResetGeral } from './ResetGeral'
 import FormularioCadastro from './Components/FormularioDecadasto/FomularioCadastro';
+import Validacoes from './Contexts/validacao';
+
 
 function App() {
 
@@ -8,7 +10,9 @@ function App() {
   return (
     <div className="App">
       <ResetGeral/>
-      <FormularioCadastro/>
+      <Validacoes.Provider>
+        <FormularioCadastro/>
+      </Validacoes.Provider>
     </div>
   );
 }

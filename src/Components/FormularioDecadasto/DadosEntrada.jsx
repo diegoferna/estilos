@@ -1,12 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Box, Retangulo, Form, Button } from '../UI'
+import { Box, Retangulo, Form } from '../UI'
 import { Container } from '@material-ui/core'
 import Logo from '../../Assets/img/Logo.svg'
 import Titulo from '../Titulo/Titulo'
 import Subtitulo from '../Subtitulo'
 import { EntradaEmail, EntradaPassword } from '../UI/Input/Input'
-import DadosPessoais from './DadosPessoais'
+import  {Btn}  from '../UI/Btn/Btnclick'
 
 export const Img = styled.img`
     position: absolute;
@@ -16,13 +16,21 @@ export const Img = styled.img`
     bottom: 78.12%;
 `
 
-export const Registro = styled.a`
+
+
+const Registro = styled.a`
     color:green;
     margin-left:5px;
+    cursor: pointer;
 `
 
 // eslint-disable-next-line import/no-anonymous-default-export
-export default  () => {
+export default  ({aoEnviar}) => {
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        aoEnviar();
+    }
     return(
         
         <Container maxWidth="lg">
@@ -31,12 +39,12 @@ export default  () => {
                 <Retangulo>
                     <Titulo>Novo registro</Titulo>
                 </Retangulo>
-                <Form>
+                <Form >
                     <EntradaEmail name="Email"/>    
                     <EntradaPassword name="Password"/>
+                    <Subtitulo>Não possui conta ainda?<Registro onClick={handleSubmit}>Registre-se aqui</Registro></Subtitulo>
+                    <Btn name="ENTRAR"/>
                 </Form>
-                <Subtitulo>Não possui conta ainda?<Registro >Registre-se aqui</Registro></Subtitulo>
-                <Button>ENTRAR</Button>
             </Box>
         </Container>
 

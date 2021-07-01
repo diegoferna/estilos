@@ -6,6 +6,7 @@ import Logo from '../../Assets/img/Logo.svg'
 import Titulo from '../Titulo/Titulo'
 import Subtitulo from '../Subtitulo'
 import { EntradaEmail, EntradaPassword } from '../UI/Input/Input'
+import  {Btn}  from '../UI/Btn/Btnclick'
 
 export const Img = styled.img`
     position: absolute;
@@ -33,10 +34,10 @@ export default  () => {
                 <Form>
                     <EntradaEmail name="Email"/>    
                     <EntradaPassword name="Senha"/>
-                    <EntradaEmail name="Confirmar senha"/> 
+                    <EntradaPassword name="Confirmar Senha"/>
+                    <Btn name="CADASTRAR">ENTRAR</Btn> 
                 </Form>
-                <Subtitulo>Não possui conta ainda?<Registro>Registre-se aqui</Registro></Subtitulo>
-                <Button>ENTRAR</Button>
+                
             </Box>
         </Container>
 

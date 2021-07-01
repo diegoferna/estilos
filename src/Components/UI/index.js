@@ -53,6 +53,8 @@ export const Form = styled.form`
     right: 0%;
     top: 39%;
     bottom: 0%;
+
+    
 `
 
 // export const Input = styled.input`
