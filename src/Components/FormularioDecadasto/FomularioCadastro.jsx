@@ -7,20 +7,16 @@ import { useState } from 'react'
 
 function FormularioCadastro({aoEnviar}){
     const [tela, setTelaAtual] = useState(0);
-    const [dados, setDados] = useState({})
 
 
 
     const formularios = [
-        <DadosEntrada aoEnviar={proxima}/>,
+        <DadosEntrada aoEnviar={proxima} />,
         <DadosPessoais  aoEnviar={proxima}/>,
         <DadosLogado  />
     ]
 
-    function armazenarDados(dados){
-
-    }
-
+   
     function proxima() {
         setTelaAtual(tela+1)
     }

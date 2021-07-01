@@ -7,6 +7,7 @@ import Titulo from '../Titulo/Titulo'
 import Subtitulo from '../Subtitulo'
 import { EntradaEmail, EntradaPassword } from '../UI/Input/Input'
 import  {Btn}  from '../UI/Btn/Btnclick'
+import DadosLogado from './DadosLogado'
 
 export const Img = styled.img`
     position: absolute;
@@ -27,10 +28,17 @@ const Registro = styled.a`
 // eslint-disable-next-line import/no-anonymous-default-export
 export default  ({aoEnviar}) => {
 
-    const handleSubmit = (event) => {
+    const handleRegister = (event) => {
         event.preventDefault();
         aoEnviar();
     }
+
+    const handleSubmit = (event)=> {
+        event.preventDefault();
+        <DadosLogado/>
+    }
+
+
     return(
         
         <Container maxWidth="lg">
@@ -39,10 +47,10 @@ export default  ({aoEnviar}) => {
                 <Retangulo>
                     <Titulo>Novo registro</Titulo>
                 </Retangulo>
-                <Form >
+                <Form onSubmit={handleSubmit}>
                     <EntradaEmail name="Email"/>    
                     <EntradaPassword name="Password"/>
-                    <Subtitulo>Não possui conta ainda?<Registro onClick={handleSubmit}>Registre-se aqui</Registro></Subtitulo>
+                    <Subtitulo>Não possui conta ainda?<Registro onClick={handleRegister}>Registre-se aqui</Registro></Subtitulo>
                     <Btn name="ENTRAR"/>
                 </Form>
             </Box>
